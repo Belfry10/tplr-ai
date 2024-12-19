@@ -610,7 +610,7 @@ class Validator:
                     self.step_scores[eval_uid] = score + loss_score  
                     self.step_loss_scores[eval_uid] = loss_score
                     self.scores[eval_uid] = (
-                        (1 - self.hparams.validator_moving_alpha) * score + 
+                        (1 - self.hparams.validator_moving_alpha) * self.step_scores[eval_uid] + 
                         self.hparams.validator_moving_alpha * self.scores[eval_uid]
                     )
 
