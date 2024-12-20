@@ -503,6 +503,7 @@ class Validator:
                     eval_start = tplr.T()
                     self.model.zero_grad()
                     total_loss = 0.0
+                    loss_after = 0.0
                     full_steps = 0
                     total_steps = 0
                     exhausted_window = False
